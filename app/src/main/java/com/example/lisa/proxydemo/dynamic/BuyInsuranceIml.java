@@ -1,6 +1,6 @@
 package com.example.lisa.proxydemo.dynamic;
 
-import com.example.lisa.proxydemo.another.IBuyInsurance;
+
 
 /**
  * TODO 购买保险实现类
@@ -12,21 +12,21 @@ public class BuyInsuranceIml implements IBuyInsurance {
     public void buyInsurance(int money,BuyInsuranceCallback callback) {
         int changeMoney =0;
         if(money>=1500){
-            String buyInsuranceInfo = "spend ¥"+money+" for insurance type three！";
+            String buyInsuranceInfo = "spend ¥ 1500 for insurance type three！";
             callback.feedback(buyInsuranceInfo);
             changeMoney = money - 1500;
             if(changeMoney!=0){
                 callback.change(changeMoney);
             }
         }else if(money>=1000){
-            String buyInsuranceInfo = "spend ¥"+money+" for insurance type two！";
+            String buyInsuranceInfo = "spend ¥ 1000 for insurance type two！";
             callback.feedback(buyInsuranceInfo);
             changeMoney = money - 1000;
             if(changeMoney!=0){
                 callback.change(changeMoney);
             }
         }else if(money>=500){
-            String buyInsuranceInfo = "spend ¥"+money+" for insurance type one！";
+            String buyInsuranceInfo = "spend ¥ 500 for insurance type one！";
             callback.feedback(buyInsuranceInfo);
             changeMoney = money - 500;
             if(changeMoney!=0){
